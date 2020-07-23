@@ -1,0 +1,8 @@
+
+  componentWillMount() {
+    AsyncStorage.getItem("userPhone").then(val => {
+      if (val) {
+        this.setState({ phone: val });
+      }
+    });
+  }
